@@ -124,7 +124,6 @@ jobs:
 
   build:
     name: Build
-    if: github.ref == 'refs/heads/master'
     needs:
       - analysis
       - tests
