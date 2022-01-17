@@ -95,7 +95,7 @@ jobs:
       - name: Run Credo
         run: mix credo
       - name: Run Dialyzer
-        run: mix dialyzer
+        run: mix dialyzer --format dialyxir
       - name: Run Sobelow
         run: mix sobelow
 
