@@ -95,7 +95,7 @@ jobs:
       - name: Run Credo
         run: mix credo
       - name: Run Dialyzer
-        run: mix dialyzer --no-check --format dialyxir --ignore-exit-status
+        run: mix dialyzer
       - name: Run Sobelow
         run: mix sobelow
 
