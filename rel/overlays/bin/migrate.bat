@@ -1,0 +1,1 @@
+call "%~dp0\intranet" eval Intranet.Release.migrate
