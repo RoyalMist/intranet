@@ -47,3 +47,10 @@ config :logger, level: :info
 #       force_ssl: [hsts: true]
 #
 # Check `Plug.SSL` for all available options in `force_ssl`.
+
+config :libcluster,
+  topologies: [
+    intranet: [
+      strategy: Cluster.Strategy.Epmd
+    ]
+  ]

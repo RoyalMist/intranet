@@ -82,4 +82,17 @@ if config_env() == :prod do
   #     config :swoosh, :api_client, Swoosh.ApiClient.Hackney
   #
   # See https://hexdocs.pm/swoosh/Swoosh.html#module-installation for details.
+
+  config :libcluster,
+    topologies: [
+      intranet: [
+        config: [
+          hosts: [
+            String.to_atom(
+              "#{System.get_env("RELEASE_NAME")}@#{System.get_env("MASTER_HOST")}-bazzile-intranet"
+            )
+          ]
+        ]
+      ]
+    ]
 end
