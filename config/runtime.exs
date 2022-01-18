@@ -88,9 +88,7 @@ if config_env() == :prod do
       intranet: [
         config: [
           hosts: [
-            String.to_atom(
-              "#{System.get_env("RELEASE_NAME")}@#{System.get_env("MASTER_HOST")}-bazzile-intranet"
-            )
+            String.to_atom("#{System.get_env("RELEASE_NAME")}@#{System.get_env("MASTER_IP")}")
           ]
         ]
       ]
