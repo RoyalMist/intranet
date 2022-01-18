@@ -87,9 +87,9 @@ if config_env() == :prod do
     topologies: [
       intranet: [
         config: [
-          hosts: [
-            String.to_atom("#{System.get_env("RELEASE_NAME")}@#{System.get_env("MASTER_IP")}")
-          ]
+          polling_interval: 5_000,
+          query: "bazzile-intranet.sh1.hidora.com/",
+          node_basename: System.get_env("RELEASE_NAME")
         ]
       ]
     ]

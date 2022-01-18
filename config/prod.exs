@@ -51,6 +51,6 @@ config :logger, level: :info
 config :libcluster,
   topologies: [
     intranet: [
-      strategy: Cluster.Strategy.Epmd
+      strategy: Elixir.Cluster.Strategy.DNSPoll
     ]
   ]
